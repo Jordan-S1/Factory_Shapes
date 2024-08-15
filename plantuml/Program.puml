@@ -1,0 +1,203 @@
+@startuml
+class Program {
+    {static} Main(args:string[]) : void
+    {static} UI1() : string
+}
+class Canvas {
+    + Canvas()
+    + Remove() : IShape
+    + Add(s:IShape) : void
+    + ClearCanvas() : void
+    + DisplayCanvas() : void
+    + SaveCanvas() : void
+}
+class User {
+    + UndoCount : int <<get>>
+    + RedoCount : int <<get>>
+    + User()
+    + Reset() : void
+    + Action(command:Command) : void
+    + Undo() : void
+    + Redo() : void
+}
+abstract class Command {
+    + {abstract} Do() : void
+    + {abstract} Undo() : void
+}
+class AddShapeCommand {
+    + AddShapeCommand(s:IShape, c:Canvas)
+    + <<override>> Do() : void
+    + <<override>> Undo() : void
+}
+class DeleteShapeCommand {
+    + DeleteShapeCommand(c:Canvas)
+    + <<override>> Do() : void
+    + <<override>> Undo() : void
+}
+abstract class ShapeCreator {
+    + {abstract} FactoryMethod() : IShape
+    + SomeOperation() : string
+}
+class SquareFactory {
+    + <<override>> FactoryMethod() : IShape
+}
+class CircleFactory {
+    + <<override>> FactoryMethod() : IShape
+}
+class RectangleFactory {
+    + <<override>> FactoryMethod() : IShape
+}
+class PolylineFactory {
+    + <<override>> FactoryMethod() : IShape
+}
+class EllipseFactory {
+    + <<override>> FactoryMethod() : IShape
+}
+class PolygonFactory {
+    + <<override>> FactoryMethod() : IShape
+}
+interface IShape {
+    + Operation() : string
+    + ToSVGElement() : string
+}
+class Square {
+    + ID : string <<get>> <<set>>
+    + X : int <<get>> <<set>>
+    + Y : int <<get>> <<set>>
+    + L : int <<get>> <<set>>
+    + Square()
+    + Square(id:string, x:int, y:int, l:int)
+    + <<override>> ToString() : string
+    + ToSVGElement() : string
+    + Operation() : string
+}
+class Circle {
+    + ID : string <<get>> <<set>>
+    + X : int <<get>> <<set>>
+    + Y : int <<get>> <<set>>
+    + R : int <<get>> <<set>>
+    + Circle()
+    + Circle(id:string, x:int, y:int, r:int)
+    + <<override>> ToString() : string
+    + ToSVGElement() : string
+    + Operation() : string
+}
+class Rectangle {
+    + ID : string <<get>> <<set>>
+    + X : int <<get>> <<set>>
+    + Y : int <<get>> <<set>>
+    + W : int <<get>> <<set>>
+    + H : int <<get>> <<set>>
+    + Rectangle()
+    + Rectangle(id:string, x:int, y:int, w:int, h:int)
+    + <<override>> ToString() : string
+    + ToSVGElement() : string
+    + Operation() : string
+}
+class Polyline {
+    + ID : string <<get>> <<set>>
+    + Points : string <<get>> <<set>>
+    + Polyline()
+    + Polyline(id:string, points:string)
+    + <<override>> ToString() : string
+    + ToSVGElement() : string
+    + Operation() : string
+}
+class Ellipse {
+    + ID : string <<get>> <<set>>
+    + X : int <<get>> <<set>>
+    + Y : int <<get>> <<set>>
+    + RX : int <<get>> <<set>>
+    + RY : int <<get>> <<set>>
+    + Ellipse()
+    + Ellipse(id:string, x:int, y:int, rx:int, ry:int)
+    + <<override>> ToString() : string
+    + ToSVGElement() : string
+    + Operation() : string
+}
+class Polygon {
+    + ID : string <<get>> <<set>>
+    + Points : string <<get>> <<set>>
+    + Polygon()
+    + Polygon(id:string, points:string)
+    + <<override>> ToString() : string
+    + ToSVGElement() : string
+    + Operation() : string
+}
+class ShapeClient {
+    + ClientCode(creator:ShapeCreator, canvas:Canvas, user:User) : void
+}
+interface Color {
+    + showShapeColor() : string
+}
+interface BorderLineStyle {
+    + showShapeStyle() : string
+}
+class SquareStyle {
+    + showShapeStyle() : string
+}
+class RoundStyle {
+    + showShapeStyle() : string
+}
+class BlueColor {
+    + showShapeColor() : string
+}
+class RedColor {
+    + showShapeColor() : string
+}
+class YellowColor {
+    + showShapeColor() : string
+}
+class GreenColor {
+    + showShapeColor() : string
+}
+class OrangeColor {
+    + showShapeColor() : string
+}
+class PurpleColor {
+    + showShapeColor() : string
+}
+abstract class Style {
+    + Style(color:Color, style:BorderLineStyle)
+    + {abstract} drawC() : string
+    + {abstract} drawS() : string
+}
+class StyleObj {
+    + StyleObj(color:Color, style:BorderLineStyle)
+    + <<override>> drawC() : string
+    + <<override>> drawS() : string
+}
+Command <|-- AddShapeCommand
+AddShapeCommand --> "shape" IShape
+AddShapeCommand --> "canvas" Canvas
+Command <|-- DeleteShapeCommand
+DeleteShapeCommand --> "shape" IShape
+DeleteShapeCommand --> "canvas" Canvas
+ShapeCreator <|-- SquareFactory
+ShapeCreator <|-- CircleFactory
+ShapeCreator <|-- RectangleFactory
+ShapeCreator <|-- PolylineFactory
+ShapeCreator <|-- EllipseFactory
+ShapeCreator <|-- PolygonFactory
+IShape <|-- Square
+Square o-> "styleobj" Style
+IShape <|-- Circle
+Circle o-> "styleobj" Style
+IShape <|-- Rectangle
+Rectangle o-> "styleobj" Style
+IShape <|-- Polyline
+Polyline o-> "styleobj" Style
+IShape <|-- Ellipse
+Ellipse o-> "styleobj" Style
+IShape <|-- Polygon
+Polygon o-> "styleobj" Style
+BorderLineStyle <|-- SquareStyle
+BorderLineStyle <|-- RoundStyle
+Color <|-- BlueColor
+Color <|-- RedColor
+Color <|-- YellowColor
+Color <|-- GreenColor
+Color <|-- OrangeColor
+Color <|-- PurpleColor
+Style <|-- StyleObj
+@enduml

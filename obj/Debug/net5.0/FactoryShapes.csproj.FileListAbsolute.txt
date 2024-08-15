@@ -1,0 +1,16 @@
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\bin\Debug\net5.0\FactoryShapes.exe
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\bin\Debug\net5.0\FactoryShapes.deps.json
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\bin\Debug\net5.0\FactoryShapes.runtimeconfig.json
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\bin\Debug\net5.0\FactoryShapes.runtimeconfig.dev.json
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\bin\Debug\net5.0\FactoryShapes.dll
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\bin\Debug\net5.0\FactoryShapes.pdb
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\FactoryShapes.csproj.AssemblyReference.cache
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\FactoryShapes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\FactoryShapes.AssemblyInfoInputs.cache
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\FactoryShapes.AssemblyInfo.cs
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\FactoryShapes.csproj.CoreCompileInputs.cache
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\FactoryShapes.dll
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\refint\FactoryShapes.dll
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\FactoryShapes.pdb
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\FactoryShapes.genruntimeconfig.cache
+C:\Users\jorda\OneDrive\Documents\Factory_Shapes\obj\Debug\net5.0\ref\FactoryShapes.dll

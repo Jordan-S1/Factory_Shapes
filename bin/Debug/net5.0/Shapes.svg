@@ -1,0 +1,5 @@
+<svg height="600" width="600" xmlns="http://www.w3.org/2000/svg">
+   <polyline id="PL8" points="62 188 66 124 72 143 76 221 80 232 89 220 90 155 97 200 102 196" stroke="limegreen" fill="transparent" stroke-width="5" stroke-linejoin="square" />
+   <polygon id="PG45" points="52 163 82 166 107 138 87 102 55 101 34 134" stroke="black" fill="purple" stroke-width="5" stroke-linejoin="round" />
+   <circle id="C10" cx="183" cy="158" r="29" stroke="black" stroke-width="5" fill="yellow" stroke-linejoin="round" />
+</svg>

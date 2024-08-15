@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ixKefCm7U/C8wxAgQRHRtp7lq4nPPyza3DETKe/hWw7kiLQNhbVFJjRSAmX6jB6nn29B+fjAlPlVVCm6T3LfLw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jorda\\OneDrive\\Documents\\Factory_Shapes\\FactoryShapes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jorda\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
